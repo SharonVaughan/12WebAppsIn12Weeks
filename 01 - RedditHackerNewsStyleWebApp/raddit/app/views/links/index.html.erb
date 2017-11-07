@@ -1,6 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% @links.each do |link| %>
+  <div class="link row clearfix">
+    <h2>
+      <%= link_to link.title, link %><br>
+      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
+    </h2>
+  </div>
+<% end %>
 
-<h1>Links</h1>
+<!-- <p id="notice"><%= notice %></p>
+
+<h1>Listing links</h1>
 
 <table>
   <thead>
@@ -24,4 +33,4 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
