@@ -1,3 +1,9 @@
+GIT
+  remote: git@github.com:azizmashkour/rails-5-ratyrate.git
+  revision: ea659c745554d2c24b4bfcbc6fe197c54150b216
+  specs:
+    ratyrate (1.2.3.alpha1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -221,6 +227,7 @@ DEPENDENCIES
   paperclip (~> 5.0.0)
   puma (~> 3.7)
   rails (~> 5.1.4)
+  ratyrate!
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
