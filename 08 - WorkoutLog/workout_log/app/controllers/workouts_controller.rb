@@ -6,7 +6,6 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    
   end
 
   def new
@@ -24,14 +23,20 @@ class WorkoutsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def update
-    
+    if @workout.update(workout_params)
+      redirect_to @workout
+    else
+      render 'edit'
+    end
   end
 
   def destroy
+    @workout.destroy
+
+    redirect_to root_path
   end
 
   private
