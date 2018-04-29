@@ -21,8 +21,8 @@ html {
 
 body {
   background: #3A1C71;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .navbar-default {
@@ -41,8 +41,14 @@ body {
     }
   }
   .navbar-link {
+    text-transform: uppercase;
+    letter-spacing: -1px;
     line-height: 3.5;
-    color: rgb(48, 181, 199);
+    color: white;
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 
@@ -59,6 +65,20 @@ body {
     font-size: 18px;
     span {
       color: rgb(48, 181, 199);
+    }
+  }
+}
+
+.links {
+  display: block;
+  margin: 1.5em auto 0 auto;
+  text-align: center;
+  color: white;
+  a {
+    padding: 0px 40px;
+    color: white;
+    &:hover {
+      text-decoration: none;
     }
   }
 }
