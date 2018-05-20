@@ -87,6 +87,34 @@ body {
       color: #b2bac2;
     }
   }
+  .post_form {
+    .post_title {
+      label {
+        display: block;
+      }
+    }
+    #post_title {
+      width: 100%;
+      border: 1px solid #d1d1d1;
+      border-radius: 0.2em;
+      margin: 1em 0;
+    }
+    input[type='submit'] {
+      background: #397cac;
+      border: none;
+      color: white;
+      font-weight: 100;
+      padding: 0.5em 1em;
+      border-radius: 0.2em;
+    }
+    textarea {
+      width: 90%;
+      min-height: 200px;
+      border: 1px solid #d1d1d1;
+      border-radius: 0.2em;
+      margin: 1em 0;
+    }
+  }
 }
 
 .button {
@@ -122,6 +150,16 @@ body {
       .content {
         width: 75%;
         float: left;
+        .comment_content {
+          margin: 0;
+          padding: 0;
+        }
+        .comment_author {
+          color: #397cac;
+          margin-top: 0.5rem;
+          font-size: 0.6em;
+          font-weight: 700;
+        }
       }
       .buttons {
         width: 25%;
@@ -137,16 +175,6 @@ body {
           text-decoration: none;
           margin-right: 2%;
         }
-      }
-      .comment_content {
-        margin: 0;
-        padding: 0;
-      }
-      .comment_author {
-        color: #397cac;
-        margin-top: 0.5rem;
-        font-size: 0.6em;
-        font-weight: 700;
       }
     }
     input[type='submit'] {

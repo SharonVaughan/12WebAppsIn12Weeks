@@ -3,12 +3,21 @@
   %p= @post.content
 
   #comments
-    %h2= @post.comments.count
+    %h2
+      = @post.comments.count
+      Comments
     = render @post.comments
 
-    %h3 Reply to thread
-    = render "comments/form"
+    - if user_signed_in?
+      %h3 Reply to thread
+      = render "comments/form"
+      %br/
+      %hr/
+      %br/
 
-  = link_to 'Edit', edit_post_path(@post)
-  = link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure you want to do this?" }
-  = link_to 'Home', root_path
+      - if current_user.id == @post.user_id
+        = link_to 'Edit', edit_post_path(@post), class: "button"
+        = link_to 'Delete', post_path(@post), method: :delete, data: { confirm: "Are you sure you want to do this?" }, class: "button"
+      
+    - else
+      %p PLEASE SIGN IN OR SIGN UP TO COMMENT
